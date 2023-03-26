@@ -2,9 +2,9 @@
 
 // import { devtools, persist } from "zustand/middleware";
 
-import create from "zustand";
+import { create } from "zustand";
 
-import { devtools, persist } from "zustand/middleware";
+import { persist, devtools } from "zustand/middleware";
 
 const courseStore = (set) => ({
 	courses: [],
@@ -15,7 +15,7 @@ const courseStore = (set) => ({
 	},
 	removeCourse: (courseId) => {
 		set((state) => ({
-			courses: state.courses.filter((c) => c.id !== courseId),
+			courses: state.courses.filter((course) => course.id !== courseId),
 		}));
 	},
 	toggleCourseStatus: (courseId) => {
