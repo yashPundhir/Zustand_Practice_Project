@@ -16,6 +16,7 @@ const CourseForm = () => {
 		addCourse({
 			id: Math.ceil(Math.random() * 1000000),
 			title: courseTitle,
+			completed: false,
 		});
 		setCourseTitle("");
 	};
